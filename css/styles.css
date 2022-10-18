@@ -201,3 +201,48 @@ a.custom-card:hover {
   margin: 25px;
   
 }
+.listaProduct{
+  margin: 20px;
+}
+#carouselExampleInterval {
+  align-items: center;
+  text-align: center;
+  width: 80% !important;
+  margin: 0;
+
+
+
+}
+.texto-content{
+  font-family:initial;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#containercontent{
+  width: 70%;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 70px;
+}
+#contenedorimagen img{
+  
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.col-4 img {
+  width: 100% !important;
+};
+  
+
+#carditem div{
+ height: 20px !important;
+}
+#carditem img{
+  height: 50% !important;
+}
+
