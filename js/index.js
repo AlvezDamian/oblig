@@ -12,3 +12,8 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 });
+
+let dato = localStorage.getItem("nombre");
+let contenedor = document.querySelector("#containermail")
+console.log(dato);
+contenedor.innerHTML = `${dato}`
