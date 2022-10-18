@@ -236,7 +236,13 @@ a.custom-card:hover {
 }
 .col-4 img {
   width: 100% !important;
+};
   
 
+#carditem div{
+ height: 20px !important;
+}
+#carditem img{
+  height: 50% !important;
 }
 
