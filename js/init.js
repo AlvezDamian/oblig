@@ -8,6 +8,18 @@ const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
 const EXT_TYPE = ".json";
 const storage =  localStorage.getItem("catID")
 
+/*let carroDeCompra =[];
+let carrito = [];
+console.log("carritonew"+carroDeCompra);
+function Agregarcarrito(prod){
+  localStorage.setItem(`${prod.name}`, JSON.stringify(prod));
+  let item = localStorage.getItem(`${prod.name}`);
+  carroDeCompra.push(item )
+  console.log(carroDeCompra);
+  
+
+};*/
+
 
 
 

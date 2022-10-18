@@ -1,13 +1,15 @@
+
+
 document.addEventListener("DOMContentLoaded", function(){
   
-  datos = [];
-  data = [];
-  
+  let datos = [];
+  let data = [];
+  console.log(datos)
 getJSONData(PRODUCT_INFO_URL).then( objeto =>{
   if(objeto.status == "ok"){
-    datos = objeto.data
-    console.log(datos);
-    insertardatos(datos)
+    datos.push(objeto.data)
+    insertardatos(datos[0]);
+    console.log(datos[0])
     
   } else { alert("ha ocurrido un error") }
   
@@ -27,7 +29,7 @@ getJSONData(PRODUCT_INFO_URL).then( objeto =>{
     } else { alert("ha ocurrido un error") }
     
   }));
-  console.log(data);
+  
 
   function insertardatos(objeto){
     
@@ -79,6 +81,8 @@ getJSONData(PRODUCT_INFO_URL).then( objeto =>{
             <span class="visually-hidden">Next</span>
             </button>
             </div>
+            <button type="button" class="btn btn-success" id="prodnumero${objeto.id}">Añadir al carrito</button>
+
         </div> 
       <div class="col-4" >
       <h5> Poductos relacionados</h5>
@@ -103,7 +107,14 @@ getJSONData(PRODUCT_INFO_URL).then( objeto =>{
     </div>
     `
     
-    document.querySelector("#container2").innerHTML = contenido
+    document.querySelector("#container2").innerHTML = contenido;
+
+    let boton = document.getElementById(`prodnumero${objeto.id}`);
+      console.log(boton)
+       boton.addEventListener("click", () =>{
+        
+   
+       })
   }
 
  
@@ -126,7 +137,9 @@ getJSONData(PRODUCT_INFO_URL).then( objeto =>{
       </div>
       `
       document.querySelector("#container3").innerHTML = content;
+      
     }}
+
     function stars(score){
       let template = [];
       for(e=0; e< score; e++){
@@ -145,3 +158,11 @@ getJSONData(PRODUCT_INFO_URL).then( objeto =>{
       /*onclick="${resettear(objeto.relatedProducts.id)}"*/
       
       
+      
+ 
+      
+     
+  
+      
+      
+ 
