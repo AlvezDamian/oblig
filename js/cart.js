@@ -1,20 +1,32 @@
+
+
 const Contenedor = document.getElementById("contenedorCarro");
-let item
+let item = [];
 
-
+console.log(productos)
 
 getJSONData("https://japceibal.github.io/emercado-api/user_cart/25801.json").then(itemApi =>{
     if(itemApi.status == `ok`){
          item = itemApi.data.articles
-         console.log(item)
-         mostrarItem(item[0])
+         /*mostrarItem(item[0])*/
     }else{
         alert("Ocurrió un error")
     }
 })
 
+item.push(localStorage.getItem("objeto"));
+console.log(item)
 
- function mostrarItem(item){  
+productos.forEach(producto => {
+  if(producto.id in localStorage){
+    item.push(localStorage.getItem(producto.id))
+  }
+  
+});
+
+
+
+ /*function mostrarItem(item){  
     Contenedor.innerHTML = `
     <div class="card mb-3" style="max-width: 1200px; max-height: 130px;" id="carditem">
   <div class="row g-0">
@@ -83,6 +95,7 @@ getJSONData("https://japceibal.github.io/emercado-api/user_cart/25801.json").the
  
     let imput = document.getElementById("inputItem")
 imput.addEventListener("click", function(){
+
     
    let footer = document.getElementById("footer") 
     let multiplicador = imput.value
@@ -96,18 +109,6 @@ imput.addEventListener("click", function(){
 
 })
     
-}
+}*/
 
 
-/*let imputvalue = document.getElementById("inputItem")
-imputvalue.addEventListener("onChange", ()=>{
-    let multiplicador = imputvalue.value
-    let subtototal =`
-    <footer>
-    <div>
-        <h5>Subtotal = ${item[0].currency}${(item[0].unitCost)*multiplicador}</h5>
-    <div>
-    </footer>`
-
-})
-    console.log(imputvalue);  */

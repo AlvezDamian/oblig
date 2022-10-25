@@ -1,4 +1,4 @@
-
+let carro = [] 
 
 document.addEventListener("DOMContentLoaded", function(){
   
@@ -110,8 +110,8 @@ getJSONData(PRODUCT_INFO_URL).then( objeto =>{
     document.querySelector("#container2").innerHTML = contenido;
 
     let boton = document.getElementById(`prodnumero${objeto.id}`);
-      console.log(boton)
        boton.addEventListener("click", () =>{
+        localStorage.setItem(objeto.id, JSON.stringify(objeto))
         
    
        })
