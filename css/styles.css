@@ -245,4 +245,42 @@ a.custom-card:hover {
 #carditem img{
   height: 50% !important;
 }
+.itemCarro img{
+
+    vertical-align: middle;
+    height: 90% !important;
+}
+.itemCarro {
+    max-width: 1399px !important;
+    max-height: 100px !important;
+}
+.itemCarro input{
+  width: 30%;
+  height: 30%;
+}
+#listaCarrito li{
+ 
+  list-style-type: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 428px;
+  margin-inline-end: -298px;
+  padding-inline-start: -57px;
+  display: inline-block;
+ 
+}
+.body-cart{
+  padding: 10px;
+
+}
+#subtT{
+  text-align: right;
+}
+#total{
+  text-align: right;
+}
+
+
+
+
 
