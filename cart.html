@@ -15,47 +15,231 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100 justify-content-between">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="containermail" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="cart.html">Carrito</a></li>
-              <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
-              <li><a class="dropdown-item" href="index.html">Cerrar sesion</a></li>
-            </ul>
-          </li>
-        </ul>
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav w-100 justify-content-between">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="categories.html">Categorías</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sell.html">Vender</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="containermail" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="cart.html">Carrito</a></li>
+            <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+            <li><a class="dropdown-item" href="index.html">Cerrar sesion</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main>
+  <div class="container">
+    <ul id="listaCarrito">
+      <li>Articulo</li>
+      <li>Costo unitario($usd)</li>
+      <li>Cantidad</li>
+      <li>Subtotal($usd)</li>
+    </ul>
+    <hr>
+   
+    <div class="row" id="contenedorCarrito">
+    </div>
+    <div class="row">
+      <div class="col-md-12" id="subtTcontainer">
+        <h5 id="subtT">Subtotal General:</h5>
+      </div>
+    
+    </div>
+    <hr>
+<form  id="formCheck" class="need-validation" novalidate >
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+      <label class="form-check-label" for="flexRadioDefault1">
+        Premium 2-5 días(+15%)
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+      <label class="form-check-label" for="flexRadioDefault2">
+        Express 5-8 días(+7%)
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" >
+      <label class="form-check-label" for="flexRadioDefault3">
+        Standard 12-15 días(+5%)
+      </label>
+      <div class="invalid-feedback">
+        seleccione un metodo de Envio
+      </div>
+      <div class="valid-feedback">
+        Looks good!
       </div>
     </div>
-  </nav>
-  <main>
-    <div class="container">
-      <div class="row" id="contenedorCarro">
+  </form>
+ 
+    
+ 
 
+  <form class="row g-3 needs-validation" id="formDatos" novalidate> 
+  <hr>
+    <h4>Dirección de Envio</h4>
+   
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="validationCustom01" value="" required>
+        <div class="invalid-feedback">
+          Nombre no puede estar vacío
+        </div>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
       </div>
-      
+      <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="validationCustom02" value="" required>
+        <div class="invalid-feedback">
+         Apellido no puede estar vacío
+        </div>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-2">
+        <label for="validationCustom04" class="form-label">Deprtamento</label>
+        <select class="form-select" id="validationCustom04" required>
+          <option selected disabled value="">seleccione uno</option>
+          <option>Artigas</option>
+          <option>Canelones</option>
+          <option>Cerro Largo</option>
+          <option>Colonia</option>
+          <option>Durazno</option>
+          <option>Flores</option>
+          <option>Florida</option>
+          <option>Lavalleja</option>
+          <option>Maldonado</option>
+          <option>Montevideo</option>
+          <option>Paysandú</option>
+          <option>Río Negro</option>
+          <option>Rivera</option>
+          <option>Rocha</option>
+          <option>Salto</option>
+          <option>San José</option>
+          <option>Soriano</option>
+          <option>Tacuarembó</option>
+          <option>Treinta y Tres</option>
+        </select>
+        <div class="invalid-feedback">
+          Porfavor seleccione un departamento.
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustom03" class="form-label">Direccion</label>
+        <input type="text" class="form-control" id="validationCustom03" required placeholder="Ej Camino Daniel 2022">
+        <div class="invalid-feedback">
+          Porfavor ingresa una cuidad
+        </div>
+      </div>
+      <hr>
+      <div class="col-sm-12 "> 
+        <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal" data-bs-target="#modalpago" id="botonPago">Método de pago</button>
+        <div class="invalid-feedback">Debe añadir un metodo de pago</div>
+        <div class="valid-feedback"> todo ok</div> 
+      </div>
+     <hr>
+      <div class="col-md-6">
+        <button class="btn btn-primary" type="submit" id="botonCompar"  data-bs-target="#formDatos">Finalizar Compra</button>
+      </div>
+      <div class="col-md-6" id="totalContainer">
+        <h4 id="total">Total:</h4>
+      </div>
+    </form>
+    <div class="modal"  id="modalpago" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Metodo de pago</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form  id="formPago" class="need-validation" novalidate >
+              <div class="form-check" >
+                <input class="form-check-input" type="radio" name="flexRadioDefault1" id="radioTarjeta" required>
+                <label for="radioTarjeta">Tarjeta credito/debito</label><br><br>
+                <div class="row" id="divTarjeta">
+                  <div class="col-md-6">
+                    <label for="numtarjeta" class="form-label">Numero de la tarjeta</label>
+                    <input type="text" class="form-control" id="numtarjeta" value="" required>
+                    <div class="invalid-feedback">
+                     Numero no puede estar vacío
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="codigoseguridad" class="form-label">Codigo de Seg.</label>
+                    <input type="text" class="form-control" id="codigoseguridad" value="" required>
+                    <div class="invalid-feedback">
+                    Codigo no puede estar vacío
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="vencimientotarjeta" class="form-label"> Vencimiento(MM/AA)</label>
+                    <input type="date" class="form-control" id="vencimientotarjeta" value="" required>
+                    <div class="invalid-feedback">
+                     vencimiento no puede estar vacío
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                </div><hr>
+              </div>
+
+              <div class="form-check" id="divCuenta">
+                <input class="form-check-input" type="radio" name="flexRadioDefault1" id="radioCuenta" >
+                <label for="radioCuenta">Transferencia bancaria</label><br><br>
+            <div class="col-md-4">
+              <label for="nroCuenta" class="form-label">Nro cuenta</label>
+              <input type="text" class="form-control" id="nroCuenta" value="" required >
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>     
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+              </div>
+            </form>
+           
+           
+        </div>
+      </div>
+      </div>
     </div>
-  </main>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
-        2022</p>
+    
+  </div>
+</main>
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-end">
+      <a href="#">Volver arriba</a>
+    </p>
+    <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a> -
+      2022</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
   </footer>
