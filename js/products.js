@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function(){
     datos = [];
     getJSONData(PRODUCTS_URL).then( objeto =>{
         if(objeto.status == "ok"){
-            productos = objeto.data.products
             datos = objeto.data.products
             console.log(datos);
             insertardatos(datos); 
